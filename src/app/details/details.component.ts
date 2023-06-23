@@ -2,21 +2,28 @@ import { HousingService } from './../housing.service';
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { Housinglocation } from '../housinglocation';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Housinglocation } from '../housinglocation';
+import { GoogleMapsModule } from '@angular/google-maps';
 @Component({
   selector: 'app-details',
   standalone: true,
   imports: [CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GoogleMapsModule
 ],
   template: `
     <article>
       <img class="listing-photo" [src]="housingLocation?.photo"
         alt="Exterior photo of {{housingLocation?.name}}"/>
       <section class="listing-description">
+        <google-map
+        height="300px"
+        width="400px"
+        ></google-map>
         <h2 class="listing-heading">{{housingLocation?.name}}</h2>
         <p class="listing-location">{{housingLocation?.city}}, {{housingLocation?.state}}</p>
+        
       </section>
       <section class="listing-features">
         <h2 class="section-heading">About this housing location</h2>
