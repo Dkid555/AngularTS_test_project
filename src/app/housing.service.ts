@@ -5,17 +5,17 @@ import { Housinglocation } from './housinglocation';
   providedIn: 'root'
 })
 export class HousingService {
-  
+
   url = 'http://localhost:3000/locations';
 
   async getAllHousingLoacations(): Promise<Housinglocation[]> {
     const data = await fetch(this.url);
     return await data.json() ?? [];
   }
-  
 
 
-  
+
+
 
   async getHousingLocationById(id: number): Promise<Housinglocation | undefined> {
     const data = await fetch(`${this.url}/${id}`);
@@ -25,6 +25,6 @@ export class HousingService {
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
   }
-  
+
 }
 

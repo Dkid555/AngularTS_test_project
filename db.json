@@ -82,8 +82,8 @@
     },
     {
     "id": 8,
-    "name": "Seriously Safe Towns",
-    "city": "Oakland",
+    "name": "Not Seriously Towns",
+    "city": "Mountain View",
     "state": "CA",
     "photo": "/assets/test_home8.jpg",
     "availableUnits": 10,
@@ -99,6 +99,17 @@
     "availableUnits": 6,
     "wifi": true,
     "laundry": true
-    }
+    },
+      {
+        "id": 10,
+        "name": "Santas Florida Mama",
+        "city": "Sunrise",
+        "state": "FL",
+        "photo": "/assets/test_home10.png",
+        "availableUnits": 6,
+        "wifi": true,
+        "laundry": true
+
+      }
     ]
-    }
+}
